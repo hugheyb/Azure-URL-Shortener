@@ -163,7 +163,7 @@
                 "computeMode": "Dynamic"
             },
             "sku": {
-                "Tier": "Dynamic",
+                "Tier": "Premium",
                 "Name": "Y1"
             }
         },
