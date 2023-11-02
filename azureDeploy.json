@@ -37,13 +37,6 @@
                 "description": "Name of the branch to use when deploying (Default = main)."
             }
         },
-        "ExpireOn": {
-            "type": "string",
-            "defaultValue": "[utcNow('yyyy-MM-dd')]",
-            "metadata": {
-                "description": "Just a text value (format: yyyy-MM-dd) that express when it is safe to delete these resources"
-            }
-        },
         "OwnerName": {
             "type": "string",
             "defaultValue": "",
@@ -70,8 +63,7 @@
             "kind": "functionapp",
             "location": "[resourceGroup().location]",
             "tags": {
-                "Owner": "[parameters('OwnerName')]",
-                "ExpireOn": "[parameters('ExpireOn')]"
+                "Owner": "[parameters('OwnerName')]"
             },
             "dependsOn": [
                 "[concat('microsoft.insights/components/', variables('insightsAppName'))]",
@@ -164,8 +156,7 @@
             "location": "[resourceGroup().location]",
             "kind": "",
             "tags": {
-                "Owner": "[parameters('OwnerName')]",
-                "ExpireOn": "[parameters('ExpireOn')]"
+                "Owner": "[parameters('OwnerName')]"
             },
             "properties": {
                 "name": "[variables('funcHhostingPlanName')]",
@@ -182,8 +173,7 @@
             "type": "Microsoft.Insights/components",
             "location": "[resourceGroup().location]",
             "tags": {
-                "Owner": "[parameters('OwnerName')]",
-                "ExpireOn": "[parameters('ExpireOn')]"
+                "Owner": "[parameters('OwnerName')]"
             },
             "kind": "",
             "properties": {
@@ -203,8 +193,7 @@
             },
             "tags": {
                 "displayName": "[variables('storageAccountName')]",
-                "Owner": "[parameters('OwnerName')]",
-                "ExpireOn": "[parameters('ExpireOn')]"
+                "Owner": "[parameters('OwnerName')]"
             },
             "properties": {
                 "supportsHttpsTrafficOnly": true
