@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "baseName": {
-            "defaultValue": "shortenertool",
+            "defaultValue": "urlshortenertool",
             "type": "string",
             "metadata": {
                 "description": "Name used as base-template to name the resources to be deployed in Azure."
@@ -25,7 +25,7 @@
         },
         "GitHubURL": {
             "type": "string",
-            "defaultValue": "https://github.com/hugheyb/Azure-URL-Shortener",
+            "defaultValue": "https://github.com/hugheyb/Azure-URL-Shortener.git",
             "metadata": {
                 "description": "The URL of GitHub (ending by .git)"
             }
@@ -39,7 +39,7 @@
         },
         "OwnerName": {
             "type": "string",
-            "defaultValue": "",
+            "defaultValue": "Brock Hughey",
             "metadata": {
                 "description": "Owner of this deployment, person to contact for question."
             }
